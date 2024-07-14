@@ -4,14 +4,14 @@ import icon from "astro-icon";
 import { remarkReadingTime } from "./remark-reading-time.mjs";
 import node from "@astrojs/node";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
-	integrations: [tailwind(), icon()],
-	output: "server",
-	adapter: node({
-		mode: "standalone",
-	}),
-	markdown: {
-		remarkPlugins: [remarkReadingTime],
-	},
+  integrations: [tailwind(), icon()],
+  output: "server",
+  adapter: cloudflare(),
+  markdown: {
+    remarkPlugins: [remarkReadingTime]
+  }
 });
