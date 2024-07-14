@@ -154,6 +154,13 @@ export const projectsPageContent: ProjectPageContent = {
       year: "2024",
       url: "https://github.com/shonebinu/taskify",
     },
+    {
+      title: "College Curriculum Programs",
+      description: "Compiled and maintained a comprehensive collection of record programs and previous year programs over three years at university.",
+      image: "/college_curriculum.webp",
+      year: "2022",
+      url: "https://github.com/shonebinu/collegeCurriculum/",
+    }
   ],
 };
 
