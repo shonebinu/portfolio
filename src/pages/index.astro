@@ -7,6 +7,11 @@ import Link from "../components/Link.astro";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection("posts");
+posts.sort((a, b) => {
+  const dateA = new Date(a.data.pubDate).getTime();
+  const dateB = new Date(b.data.pubDate).getTime();
+  return dateB - dateA;
+});
 ---
 
 <Layout seo={homePageContent.seo}>
