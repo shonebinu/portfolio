@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+import FormattedDate from "../../components/FormattedDate.astro";
+import Layout from "../../layouts/Layout.astro";
+import { Rss } from "@lucide/astro";
+
+import { SITE_URL } from "../../consts.ts";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<Layout>
+  <div class="flex items-center justify-between">
+    <h2>
+      <span class="fancy-highlight">Latest Posts</span>
+    </h2>
+    <a href=`${SITE_URL}/rss.xml` title="RSS"><Rss /></a>
+  </div>
+
+  <section>
+    <div class="mt-6 flex flex-col gap-6">
+      {
+        posts.map((post) => (
+          <div>
+            <a href={`/blog/${post.id}/`}>
+              {post.data.heroImage && (
+                <Image src={post.data.heroImage} alt="Post image" />
+              )}
+              <h3>{post.data.title}</h3>
+              <p class="primary-badge">
+                <FormattedDate date={post.data.pubDate} />
+              </p>
+              <p>{post.data.description}</p>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

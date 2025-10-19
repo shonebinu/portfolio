@@ -1,0 +1,91 @@
+---
+import {
+  Github,
+  Linkedin,
+  SquareArrowOutUpRight,
+  Youtube,
+} from "@lucide/astro";
+import ProfilePic from "../assets/profile-pic.jpg";
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section>
+    <h1>
+      Hi, I'm <span class="fancy-highlight">Shone Binu</span>
+    </h1>
+    <p>Software Engineer / Full Stack Developer</p>
+    <Image
+      src={ProfilePic}
+      alt="Profile Picture"
+      class="mx-auto my-4 w-32 rounded-full"
+    />
+    <p>
+      I’m a recent <u>Sofware Engineer</u> graduate who likes to keep tackling new
+      problems. Currently I’m working on <u>React and Node.js</u> side of things.
+      Outside of this, I work myself to improve myself on whatever I see fit.
+    </p>
+    <div class="my-4 flex gap-2">
+      <a href="" class="link link-accent" title="Github"><Github /></a>/
+      <a href="" class="link link-accent" title="Linkedin"><Linkedin /></a>/
+      <a href="" class="link link-accent" title="Youtube"><Youtube /></a>
+    </div>
+    <div class="flex flex-col gap-2 sm:flex-row">
+      <a class="btn btn-primary sm:flex-1" href="" target="_blank"
+        >Open Resume<SquareArrowOutUpRight size="1rem" />
+      </a>
+      <a class="btn btn-soft btn-accent sm:flex-1" href="/works">My Works</a>
+    </div>
+  </section>
+
+  <section class="mt-6">
+    <h2>
+      <span class="fancy-highlight">Work Experience</span>
+    </h2>
+    <div class="mt-2 flex flex-col gap-6">
+      <div>
+        <h3>Full Stack Developer Intern</h3>
+        <div class="primary-badge">May 2024 - Oct 2024</div>
+        <p class="label mb-1 block">Rabbitsquare • India</p>
+        <p>
+          Developed a comprehensive web solution for a Civil Service academy,
+          including a customizable public website, a management portal, a user
+          portal, and an exam result publishing system using the LAMP stack.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-6">
+    <h2>
+      <span class="fancy-highlight">Education</span>
+    </h2>
+    <div class="mt-2 flex flex-col gap-6">
+      <div>
+        <h3>Bachelor of Computer Application</h3>
+        <div class="primary-badge">Jun 2022 - Apr 2025</div>
+        <p class="label mb-1 block">Nirmala College Muvattupuzha • India</p>
+        <p>
+          My computer science curriculum covered programming languages, data
+          structures, algorithms, and software engineering, with practical
+          experience in Java, C/C++, JavaScript, Linux and PHP.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-6">
+    <h2>
+      <span class="fancy-highlight">Get In Touch</span>
+    </h2>
+    <div class="mt-2">
+      <p>
+        Drop in an email at <a
+          href="mailto:hello@shonebinu.com"
+          class="primary-underline">hello@shonebinu.com</a
+        > or connect me on with one of my socials.
+      </p>
+    </div>
+  </section>
+</Layout>

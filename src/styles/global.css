@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
+
+@theme {
+  --default-font-family: "IBM Plex Sans", var(--font-sans);
+  --default-mono-font-family: "IBM Plex Mono", var(--font-mono);
+}
+
+@layer components {
+  .fancy-highlight {
+    @apply rounded-md bg-[var(--color-base-300)]/30 underline decoration-[var(--color-accent)] decoration-2 underline-offset-4 backdrop-blur-2xl;
+  }
+
+  .primary-badge {
+    @apply badge badge-soft badge-primary;
+  }
+
+  .primary-underline {
+    @apply underline decoration-[var(--color-primary)] decoration-2 underline-offset-4;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply my-1 text-3xl font-bold;
+  }
+
+  h2 {
+    @apply my-1 text-2xl font-bold;
+  }
+
+  h3 {
+    @apply text-lg font-medium;
+  }
+
+  h4 {
+    @apply font-medium;
+  }
+
+  h5 {
+    @apply text-sm font-medium;
+  }
+
+  h6 {
+    @apply text-xs font-medium;
+  }
+
+  p {
+    @apply leading-7;
+  }
+}

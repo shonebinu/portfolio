@@ -1,0 +1,39 @@
+---
+import { Sun, Moon } from "@lucide/astro";
+---
+
+<label class="swap swap-rotate">
+  <input type="checkbox" class="theme-controller" id="themeToggle" />
+  <Sun class="swap-on" />
+  <Moon class="swap-off" />
+</label>
+
+<script is:inline>
+  const theme = (() => {
+    const localStorageTheme = localStorage?.getItem("theme") ?? "";
+    if (["dark", "light"].includes(localStorageTheme)) {
+      return localStorageTheme;
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  document.documentElement.setAttribute("data-theme", theme);
+
+  const toggleInput = document.getElementById("themeToggle");
+
+  if (toggleInput) {
+    toggleInput.checked = theme === "dark";
+
+    const handleToggleClick = () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    };
+
+    toggleInput?.addEventListener("click", handleToggleClick);
+  }
+</script>

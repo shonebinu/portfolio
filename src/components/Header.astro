@@ -1,0 +1,38 @@
+---
+import ThemeSwitch from "./ThemeSwitch.astro";
+
+const navItems = [
+  { href: "/", label: "About" },
+  { href: "/works", label: "Works" },
+  { href: "/blog", label: "Blog" },
+];
+
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
+const subpath = pathname.match(/[^\/]+/g);
+---
+
+<header
+  class="bg-base-300/30 sticky top-0 z-10 flex items-center justify-between p-4 backdrop-blur-md"
+>
+  <h2><a href="/">SB</a></h2>
+
+  <nav class="flex gap-3">
+    {
+      navItems.map((item) => {
+        const isActive =
+          item.href === pathname || item.href === "/" + (subpath?.[0] || "");
+
+        return (
+          <a
+            href={item.href}
+            class={`link font-medium ${isActive ? "link-primary" : ""}`}
+          >
+            {item.label}
+          </a>
+        );
+      })
+    }
+  </nav>
+
+  <ThemeSwitch />
+</header>

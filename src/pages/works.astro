@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SampleImage from "../assets/blog-placeholder-1.jpg";
+import { Image } from "astro:assets";
+import { Github, Globe } from "@lucide/astro";
+---
+
+<Layout>
+  <h2>
+    <span class="fancy-highlight">My Works</span>
+  </h2>
+
+  <section class="mt-6 flex flex-col gap-6">
+    <div>
+      <Image src={SampleImage} alt="Project image" />
+      <p class="text-lg font-medium">MGU Scraper</p>
+      <div class="flex gap-1">
+        <span class="badge badge-soft badge-primary">Streamlit</span>
+        <span class="badge badge-soft badge-primary">Python</span>
+        <span class="badge badge-soft badge-primary">BeautifulSoup</span>
+      </div>
+      <p class="mt-1">
+        MGUScraper is a tool that simplifies the bulk extraction of student's
+        exam results under MG University, Kottayam.
+      </p>
+      <div class="mt-1 flex gap-2">
+        <button class="btn btn-accent btn-soft flex-1"><Github />Source</button>
+        <button class="btn btn-soft flex-1"><Globe />Live</button>
+      </div>
+    </div>
+
+    <div>
+      <Image src={SampleImage} alt="Project image" />
+      <p class="text-lg font-medium">Flashify</p>
+      <div class="flex gap-1">
+        <span class="badge badge-soft badge-primary">PHP</span>
+        <span class="badge badge-soft badge-primary">MySQL</span>
+        <span class="badge badge-soft badge-primary">Apache</span>
+      </div>
+      <p class="mt-1">
+        Flashify is a minimal, beautiful, and responsive web-based flashcard
+        application built using the LAMP stack.
+      </p>
+      <div class="mt-1 flex gap-2">
+        <button class="btn btn-accent btn-soft flex-1"><Github />Source</button>
+        <button class="btn btn-soft flex-1"><Globe />Live</button>
+      </div>
+    </div>
+  </section>
+</Layout>
