@@ -6,8 +6,6 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import Layout from "../../layouts/Layout.astro";
 import { Rss } from "@lucide/astro";
 
-import { SITE_URL } from "../../consts.ts";
-
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
