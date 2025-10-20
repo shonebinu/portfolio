@@ -3,7 +3,7 @@
 @plugin "daisyui";
 
 @theme {
-  --default-font-family: "IBM Plex Sans", var(--font-sans);
+  --default-font-family: "Inter", var(--font-sans);
 }
 
 @layer components {
