@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
+import "../styles/fonts.css";
 import type { ImageMetadata } from "astro";
 import FallbackImage from "../assets/blog-placeholder-1.jpg";
 import { SITE_TITLE } from "../consts";
@@ -31,6 +32,27 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
+<link
+  rel="preload"
+  href="/fonts/ibm-plex-sans-v23-latin-regular.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
+<link
+  rel="preload"
+  href="/fonts/ibm-plex-sans-v23-latin-500.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
+<link
+  rel="preload"
+  href="/fonts/ibm-plex-sans-v23-latin-700.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />

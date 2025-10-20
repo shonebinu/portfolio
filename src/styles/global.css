@@ -2,6 +2,10 @@
 @plugin "@tailwindcss/typography";
 @plugin "daisyui";
 
+@theme {
+  --default-font-family: "IBM Plex Sans", var(--font-sans);
+}
+
 @layer components {
   .fancy-highlight {
     @apply rounded-md bg-[var(--color-base-300)]/30 underline decoration-[var(--color-accent)] decoration-2 underline-offset-4 backdrop-blur-2xl;
