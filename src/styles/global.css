@@ -8,7 +8,7 @@
   }
 
   .primary-badge {
-    @apply badge badge-soft badge-primary;
+    @apply badge badge-soft;
   }
 
   .primary-underline {
