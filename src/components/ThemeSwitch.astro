@@ -18,7 +18,11 @@ import { Sun, Moon } from "@lucide/astro";
       return localStorageTheme;
     }
 
-    return "dark"; // default to dark
+    const prefersDark = window.matchMedia?.(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    return prefersDark ? "dark" : "light";
   })();
 
   document.documentElement.setAttribute("data-theme", theme);

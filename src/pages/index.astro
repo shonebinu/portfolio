@@ -1,13 +1,9 @@
 ---
-import {
-  Github,
-  Linkedin,
-  SquareArrowOutUpRight,
-  Youtube,
-} from "@lucide/astro";
+import { SquareArrowOutUpRight } from "@lucide/astro";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import { about } from "../consts.ts";
+import LucideIcon from "../components/LucideIcon.astro";
 ---
 
 <Layout>
@@ -22,14 +18,14 @@ import { about } from "../consts.ts";
     <p set:html={about.description} />
     <div class="my-4 flex gap-2">
       {
-        // logo needs to have its first letter uppercased to render properly
-        about.links.map(({ title, logo: Logo, link }) => (
+        about.links.map((link) => (
           <a
-            href={link}
+            href={link.href}
+            target="_blank"
             class="btn btn-soft btn-circle btn-accent"
-            title={title}
+            title={link.icon}
           >
-            <Logo />
+            <LucideIcon name={link.icon} />
           </a>
         ))
       }
@@ -37,7 +33,7 @@ import { about } from "../consts.ts";
     <div class="flex flex-col gap-2 sm:flex-row">
       <a
         class="btn btn-primary sm:flex-1"
-        href={about.resumeLink}
+        href={about.resumeHref}
         target="_blank"
         >Open Resume<SquareArrowOutUpRight size="1rem" />
       </a>
@@ -55,7 +51,7 @@ import { about } from "../consts.ts";
       {
         about.workExperience.map((exp) => (
           <div>
-            <h3>{exp.jobTitle}</h3>
+            <h3>{exp.title}</h3>
             <div class="primary-badge">{exp.timeline}</div>
             <p class="label mb-1 block">{exp.company}</p>
             <p>{exp.description}</p>
@@ -73,7 +69,7 @@ import { about } from "../consts.ts";
       {
         about.education.map((edu) => (
           <div>
-            <h3>{edu.degreeName}</h3>
+            <h3>{edu.title}</h3>
             <div class="primary-badge">{edu.timeline}</div>
             <p class="label mb-1 block">{edu.institution}</p>
             <p>{edu.description}</p>

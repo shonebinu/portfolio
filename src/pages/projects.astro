@@ -27,15 +27,17 @@ import { projects } from "../consts.ts";
             <p class="mt-1">{proj.description}</p>
             <div class="mt-1 flex gap-2">
               <a
-                href={proj.sourceLink}
-                class={`btn btn-accent btn-soft flex-1 ${!proj.sourceLink ? "btn-disabled" : ""}`}
+                href={proj.sourceHref}
+                target="_blank"
+                class={`btn btn-accent btn-soft flex-1 ${!proj.sourceHref ? "btn-disabled" : ""}`}
               >
                 <Github />
                 Source
               </a>
               <a
-                href={proj.liveLink}
-                class={`btn btn-soft flex-1 ${!proj.liveLink ? "btn-disabled" : ""}`}
+                href={proj.liveHref}
+                target="_blank"
+                class={`btn btn-soft flex-1 ${!proj.liveHref ? "btn-disabled" : ""}`}
               >
                 <Globe />
                 Live

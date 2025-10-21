@@ -26,17 +26,21 @@ const posts = (await getCollection("blog")).sort(
           href={`/blog/${post.id}/`}
           class="flex flex-col sm:flex-row sm:gap-4"
         >
-          {post.data.heroImage && (
-            <div class="w-full sm:w-1/3">
+          <div class="w-full sm:w-1/3">
+            {post.data.heroImage ? (
               <Image
                 src={post.data.heroImage}
                 alt="Post image"
-                class="rounded-lg"
+                class="rounded-lg object-cover"
               />
-            </div>
-          )}
+            ) : (
+              <div class="bg-base-200 flex h-30 items-center justify-center rounded-lg">
+                No image
+              </div>
+            )}
+          </div>
           <div class="w-full sm:w-2/3">
-            <h3>{post.data.title}</h3>
+            <h3 class="hover:underline">{post.data.title}</h3>
             <p class="primary-badge mt-1">
               <FormattedDate date={post.data.pubDate} />
             </p>
