@@ -1,5 +1,6 @@
 ---
 import ThemeSwitch from "./ThemeSwitch.astro";
+import { header } from "../consts.ts";
 
 const navItems = [
   { href: "/", label: "About" },
@@ -14,7 +15,7 @@ const subpath = pathname.match(/[^\/]+/g);
 <header
   class="bg-base-300/30 sticky top-0 z-10 flex items-center justify-between p-4 backdrop-blur-md"
 >
-  <h2><a href="/">SB</a></h2>
+  <h2><a href="/">{header.logoTitle}</a></h2>
 
   <nav class="flex gap-4">
     {

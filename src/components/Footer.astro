@@ -1,8 +1,7 @@
+---
+import { footer } from "../consts.ts";
+---
+
 <footer class="label mt-8 mb-4 flex justify-center text-sm">
-  <span>
-    Made with ❤️ by Shone Binu • <a
-      href="https://github.com/shonebinu/portfolio"
-      class="link">Source Code</a
-    ></span
-  >
+  <span set:html={footer.content} />
 </footer>
