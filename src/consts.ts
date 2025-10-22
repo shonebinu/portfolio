@@ -62,7 +62,7 @@ export const about: About = {
 
 export const projects: Project[] = [
   {
-    image: PenweaveImage,
+    logoImage: PenweaveImage,
     title: "Penweave",
     techs: ["React", "Supabase", "daisyUI"],
     description:
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     sourceHref: "https://github.com/shonebinu/penweave/",
   },
   {
-    image: MGUScraperImage,
+    logoImage: MGUScraperImage,
     title: "MGU Scraper",
     techs: ["Python", "Streamlit", "Beautiful Soup"],
     description:
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     liveHref: "https://mguscraper.streamlit.app/",
   },
   {
-    image: FlashifyImage,
+    logoImage: FlashifyImage,
     title: "Flashify",
     techs: ["PHP", "MySQL", "LAMP"],
     description:
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     liveHref: "https://flashify.shonebinu.com/",
   },
   {
-    image: WeatherifyImage,
+    logoImage: WeatherifyImage,
     title: "Weatherify",
     techs: ["Javascript", "Webpack"],
     description:

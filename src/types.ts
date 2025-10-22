@@ -41,7 +41,7 @@ export interface About {
 }
 
 export interface Project {
-  image: ImageMetadata;
+  logoImage: ImageMetadata;
   title: string;
   techs: string[];
   description: string;

@@ -4,8 +4,10 @@
 import "../styles/global.css";
 import "../styles/fonts.css";
 import type { ImageMetadata } from "astro";
-import FallbackImage from "../assets/profile-pic.jpg";
+import { about } from "../consts";
 import { SITE_TITLE } from "../consts";
+
+const FallbackImage = about.profilePic;
 
 interface Props {
   title: string;
