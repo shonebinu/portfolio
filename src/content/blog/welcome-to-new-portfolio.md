@@ -1,6 +1,6 @@
 ---
 title: "Welcome to my new portfolio"
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+description: "Portfolio website made using Astro and daisyUI."
 pubDate: "Jun 19 2024"
 heroImage: "../../assets/blog/portfolio-home-screenshot.png"
 ---
