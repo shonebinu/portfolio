@@ -10,9 +10,7 @@ Minimalistic and Beautiful Portfolio made using [Astro](https://astro.build/)
 
 ## Customization
 - Update site data in `src/consts.ts`
-- Add images to `src/assets` or `public`
 - Add blog posts in `src/content/blog` using `.md` or `.mdx`
-To change themes, edit the CSS and update ThemeSwitch.astro with your chosen [daisyUI theme](https://daisyui.com/docs/themes/).
 
 ## Credits
 - Background texture: [transparenttextures.com](https://www.transparenttextures.com/)
