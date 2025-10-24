@@ -10,8 +10,26 @@ import FlashifyImage from "./assets/projects/flashify.png";
 import WeatherifyImage from "./assets/projects/weatherify.png";
 
 export const SITE_URL: string = "https://shonebinu.com";
-export const SITE_TITLE: string = "Shone's Portfolio";
-export const SITE_DESCRIPTION: string = "Welcome to my website!";
+
+export const meta = {
+  about: {
+    // index page
+    title: "Shone Binu",
+    description:
+      "Hi, I'm Shone Binu, a software engineer. Welcome to my little corner of the internet!",
+  },
+  projects: {
+    title: "Projects | Shone Binu",
+    description:
+      "Here are some of my projects — things I’ve built, experimented with, and had fun creating.",
+  },
+  blog: {
+    title: "Blog | Shone Binu",
+    description:
+      "This is my blog — a place where I share thoughts, ideas, and things I’m learning along the way.",
+  },
+  // blog post title and description are taken from the variables in markdown file
+};
 
 export const header: Header = { logoTitle: "SB" };
 
@@ -57,7 +75,7 @@ export const about: About = {
   ],
   // parses html
   getInTouch:
-    "Drop me an email at <a href='mailto:hello@shonebinu.com' class='primary-underline'>hello@shonebinu.com</a> or connect with me on one of my socials.",
+    "Drop me an email at <a href='mailto:mail@shonebinu.com' class='primary-underline'>mail@shonebinu.com</a> or connect with me on one of my socials.",
 };
 
 export const projects: Project[] = [

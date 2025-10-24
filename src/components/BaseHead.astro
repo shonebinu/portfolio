@@ -4,8 +4,7 @@
 import "../styles/global.css";
 import "../styles/fonts.css";
 import type { ImageMetadata } from "astro";
-import { about } from "../consts";
-import { SITE_TITLE } from "../consts";
+import { meta, about } from "../consts";
 
 const FallbackImage = about.profilePic;
 
@@ -28,7 +27,7 @@ const { title, description, image = FallbackImage } = Astro.props;
 <link
   rel="alternate"
   type="application/rss+xml"
-  title={SITE_TITLE}
+  title={meta.about.title}
   href={new URL("rss.xml", Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />

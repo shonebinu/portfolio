@@ -2,11 +2,11 @@
 import { SquareArrowOutUpRight } from "@lucide/astro";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import { about } from "../consts.ts";
+import { meta, about } from "../consts.ts";
 import LucideIcon from "../components/LucideIcon.astro";
 ---
 
-<Layout>
+<Layout title={meta.about.title} description={meta.about.description}>
   <section>
     <h1 set:html={about.headLine} />
     <p>{about.tagLine}</p>

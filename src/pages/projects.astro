@@ -2,10 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { Github, Globe } from "@lucide/astro";
-import { projects } from "../consts.ts";
+import { meta, projects } from "../consts.ts";
 ---
 
-<Layout>
+<Layout title={meta.projects.title} description={meta.projects.description}>
   <h2>
     <span class="fancy-highlight">My Projects</span>
   </h2>
