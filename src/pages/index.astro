@@ -15,7 +15,7 @@ import LucideIcon from "../components/LucideIcon.astro";
       alt="Profile Picture"
       class="mx-auto my-4 w-32 rounded-full"
     />
-    <p set:html={about.description} />
+    <p set:html={about.description} class="text-base-content/80" />
     <div class="my-4 flex gap-2">
       {
         about.links.map((link) => (
@@ -53,8 +53,8 @@ import LucideIcon from "../components/LucideIcon.astro";
           <div>
             <h3>{exp.title}</h3>
             <div class="primary-badge">{exp.timeline}</div>
-            <p class="label mb-1 block">{exp.company}</p>
-            <p>{exp.description}</p>
+            <p class="mb-1">{exp.company}</p>
+            <p class="text-base-content/80">{exp.description}</p>
           </div>
         ))
       }
@@ -71,8 +71,8 @@ import LucideIcon from "../components/LucideIcon.astro";
           <div>
             <h3>{edu.title}</h3>
             <div class="primary-badge">{edu.timeline}</div>
-            <p class="label mb-1 block">{edu.institution}</p>
-            <p>{edu.description}</p>
+            <p class="mb-1">{edu.institution}</p>
+            <p class="text-base-content/80">{edu.description}</p>
           </div>
         ))
       }
@@ -84,7 +84,7 @@ import LucideIcon from "../components/LucideIcon.astro";
       <span class="fancy-highlight">Get In Touch</span>
     </h2>
     <div class="mt-2">
-      <p set:html={about.getInTouch} />
+      <p set:html={about.getInTouch} class="text-base-content/80" />
     </div>
   </section>
 </Layout>

@@ -32,7 +32,7 @@ const posts = (await getCollection("blog")).sort(
             <p class="primary-badge mt-1">
               <FormattedDate date={post.data.pubDate} />
             </p>
-            <p>{post.data.description}</p>
+            <p class="text-base-content/80">{post.data.description}</p>
           </div>
         </a>
       ))
