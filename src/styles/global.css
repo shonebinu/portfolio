@@ -48,4 +48,9 @@
   p {
     @apply leading-7;
   }
+
+  u,
+  a {
+    @apply text-base-content;
+  }
 }

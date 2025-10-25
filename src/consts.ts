@@ -46,7 +46,7 @@ export const about: About = {
   profilePic: ProfilePic,
   // parses html
   description:
-    "I’m a recent <u class='text-base-content'>Software Engineer</u> graduate from India 🇮🇳 who likes to keep tackling new problems. Currently, I’m working on the <u class='text-base-content'>React and Node.js</u> side of things. Outside of this, I work on improving myself in whatever I see fit.",
+    "I’m a recent <u>Software Engineer</u> graduate from India 🇮🇳 who likes to keep tackling new problems. Currently, I’m working on the <u>React and Node.js</u> side of things. Outside of this, I work on improving myself in whatever I see fit.",
   links: [
     // Lucide icons
     { icon: "Github", href: "https://github.com/shonebinu/" },
@@ -75,7 +75,7 @@ export const about: About = {
   ],
   // parses html
   getInTouch:
-    "Drop me an email at <a href='mailto:mail@shonebinu.com' class='primary-underline text-base-content'>mail@shonebinu.com</a> or connect with me on one of my socials.",
+    "Drop me an email at <a href='mailto:mail@shonebinu.com' class='primary-underline'>mail@shonebinu.com</a> or connect with me on one of my socials.",
 };
 
 export const projects: Project[] = [
