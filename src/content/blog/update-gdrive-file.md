@@ -4,7 +4,7 @@ description: "How to update a file in Google Drive without changing its, so you 
 pubDate: "Oct 25 2025"
 ---
 
-Suppose you have a resume uploaded to Google Drive, and you've shared its link across every platform you know off. Now you want to update the content of your resume, but you'd rather not go through the hassle of changing the URL everywhere. 🫠
+Suppose you have a resume uploaded to Google Drive, and you've shared its link across every platform you know of. Now you want to update the content of your resume, but you'd rather not go through the hassle of changing the URL everywhere. 🫠
 
 You can simply click on the more actions (⋮) of the file -> Select File information -> Manage versions.
 
