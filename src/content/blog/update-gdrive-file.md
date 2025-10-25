@@ -1,6 +1,6 @@
 ---
 title: "Update Google Drive file without changing its URL"
-description: "How to update a file in Google Drive without changing its, so you don’t have to update it everywhere else."
+description: "How to update a file in Google Drive without changing its URL, so you don’t have to update it everywhere else."
 pubDate: "Oct 25 2025"
 ---
 
