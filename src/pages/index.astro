@@ -52,8 +52,8 @@ import LucideIcon from "../components/LucideIcon.astro";
         about.workExperience.map((exp) => (
           <div>
             <h3>{exp.title}</h3>
-            <div class="primary-badge">{exp.timeline}</div>
-            <p class="mb-1">{exp.company}</p>
+            <div class="primary-badge my-1">{exp.timeline}</div>
+            <p class="mb-2">{exp.company}</p>
             <p class="text-base-content/80">{exp.description}</p>
           </div>
         ))
@@ -70,8 +70,8 @@ import LucideIcon from "../components/LucideIcon.astro";
         about.education.map((edu) => (
           <div>
             <h3>{edu.title}</h3>
-            <div class="primary-badge">{edu.timeline}</div>
-            <p class="mb-1">{edu.institution}</p>
+            <div class="primary-badge my-1">{edu.timeline}</div>
+            <p class="mb-2">{edu.institution}</p>
             <p class="text-base-content/80">{edu.description}</p>
           </div>
         ))
