@@ -2,7 +2,7 @@
 
 Minimalistic and Beautiful Portfolio website made using [Astro](https://astro.build/) and [daisyUI](https://daisyui.com/).
 
-<img width="2986" height="1610" alt="Portfolio Screenshot" src="https://github.com/user-attachments/assets/30178a74-9b42-4977-9808-0693bd10d92e" />
+<img width="2986" height="1610" alt="Portfolio Screenshot" src="https://github.com/user-attachments/assets/1e673bdb-da69-4ddc-ae73-7db6e758e6f6" />
 
 ## Customization
 
