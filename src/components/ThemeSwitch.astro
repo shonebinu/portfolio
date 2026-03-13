@@ -14,15 +14,15 @@ import { Sun, Moon } from "@lucide/astro";
 <script is:inline>
   const theme = (() => {
     const localStorageTheme = localStorage?.getItem("theme") ?? "";
-    if (["dark", "light"].includes(localStorageTheme)) {
+    if (["dark", "corporate"].includes(localStorageTheme)) {
       return localStorageTheme;
     }
 
     const prefersDark = window.matchMedia?.(
-      "(prefers-color-scheme: dark)"
+      "(prefers-color-scheme: dark)",
     ).matches;
 
-    return prefersDark ? "dark" : "light";
+    return prefersDark ? "dark" : "corporate";
   })();
 
   document.documentElement.setAttribute("data-theme", theme);
@@ -34,7 +34,7 @@ import { Sun, Moon } from "@lucide/astro";
 
     const handleToggleClick = () => {
       const current = document.documentElement.getAttribute("data-theme");
-      const next = current === "dark" ? "light" : "dark";
+      const next = current === "dark" ? "corporate" : "dark";
       document.documentElement.setAttribute("data-theme", next);
       localStorage.setItem("theme", next);
     };
