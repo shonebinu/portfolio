@@ -9,6 +9,9 @@ import MGUScraperImage from "./assets/projects/mguscraper.png";
 import FlashifyImage from "./assets/projects/flashify.png";
 import WeatherifyImage from "./assets/projects/weatherify.png";
 import BriefImage from "./assets/projects/brief.svg";
+import DefuseImage from "./assets/projects/defuse.svg";
+import LipiImage from "./assets/projects/lipi.svg";
+import ExchangeImage from "./assets/projects/exchange.svg";
 import PlaceholderImage from "./assets/projects/placeholder.svg";
 
 export const SITE_URL: string = "https://shonebinu.com";
@@ -51,7 +54,7 @@ export const about: About = {
   profilePic: ProfilePic,
   // parses html
   description:
-    "I’m a recent <u>Software Engineer</u> graduate from India 🇮🇳 who likes to keep tackling new problems. Currently, I’m working on the <u>React and Node.js</u> side of things. Outside of this, I work on improving myself in whatever I see fit.",
+    "I’m a recent <u>Software Engineer</u> graduate from India 🇮🇳 who likes to keep tackling new problems. Currently, I’m working on the <u>React/Node.js</u> and <u>GTK</u> side of things. Outside of these, I work on improving myself in whatever I see fit.",
   links: [
     // Lucide icons
     { icon: "Github", href: "https://github.com/shonebinu/" },
@@ -89,9 +92,36 @@ export const projects: Project[] = [
     title: "Brief",
     techs: ["Python", "Gtk", "Linux", "Flatpak"],
     description:
-      "Brief is a GTK4 application for browsing community-maintained command line help pages. It uses tldr-pages as the data source.",
-    sourceHref: "https://github.com/shonebinu/brief",
+      "Brief lets you browse community-maintained command line help pages. It uses tldr-pages as the data source.",
+    sourceHref: "https://github.com/shonebinu/Brief",
     liveHref: "https://flathub.org/en/apps/io.github.shonebinu.Brief",
+  },
+  {
+    logoImage: LipiImage,
+    title: "Lipi",
+    techs: ["Python", "Gtk", "Linux", "Flatpak"],
+    description:
+      "Lipi is for installing and managing fonts from Google Fonts repo contaning thousands of fonts.",
+    sourceHref: "https://github.com/shonebinu/Lipi",
+    liveHref: "https://flathub.org/en/apps/io.github.shonebinu.Glyph",
+  },
+  {
+    logoImage: DefuseImage,
+    title: "Defuse",
+    techs: ["Python", "Gtk", "Linux", "Flatpak"],
+    description:
+      "Defuse lets you remove image backgrounds locally. Processing is performed using the ISNet-general model through ONNX Runtime.",
+    sourceHref: "https://github.com/shonebinu/Defuse",
+    liveHref: "https://flathub.org/en/apps/io.github.shonebinu.Defuse",
+  },
+  {
+    logoImage: ExchangeImage,
+    title: "Exchange",
+    techs: ["Python", "Gtk", "Linux", "Flatpak"],
+    description:
+      "Exchange does conversion between the XML and Blueprint GTK UI definition formats. It uses blueprint-compiler under the hood.",
+    sourceHref: "https://github.com/shonebinu/Exchange",
+    liveHref: "https://flathub.org/en/apps/io.github.shonebinu.Exchange",
   },
   {
     logoImage: PlaceholderImage,
